@@ -1,6 +1,7 @@
 class AppointmentController < ApplicationController
 	def app_form
-
+		@patient=Patient.all
+		@doctor = Doctor.all
 	end
 
 	def app_form_save
