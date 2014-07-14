@@ -1,10 +1,30 @@
 <form action='/save_patient'>
-Patient Details<br>
-Name    : <input type="string" name="p_name"><br>
-Address : 
-<textarea rows="4" cols="25"
-<input type="text" name="p_adr"></textarea><br>
-Age     : <input type="integer" name="p_age"><br>
-Sex     : <input type="string" name="p_sex>"><br>
-<input type="submit">
+<h3>Patient Details</h3>
+<ul>
+  <li>
+	<label for="Name">Name</label>
+	<input type="text" id="Name" name="p_name">
+  </li>
+
+  <li>
+	<label for="Adr">Address</label>
+    <textarea rows="4" cols="25" id="Adr" name="p_adr"></textarea>
+  </li>
+
+  <li>
+    <label for="Age">Age</label>
+	<input type="number" id="Age" name="p_age">
+  </li>
+
+  <li>
+	<label>Sex</label>
+	<input type="radio" value="Male" checked="checked" name="p_sex">Male<br>
+	<input type="radio" value="Female" name="p_sex">Female
+  </li>	
+
+  <li>
+    <label></label>
+    <input type="submit"> <%= button_to "Cancel", "/" %>
+  </li>
+</ul>
 </form>

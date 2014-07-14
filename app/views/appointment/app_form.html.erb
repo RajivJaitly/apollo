@@ -1,9 +1,22 @@
 <form action='/a_f_save'>
-Appointment Details<br>
-<br>
-Patient     : <input type="integer" name="fa_pid"><br>
-<br>
-Doctor : <input type="integer" name="fa_did"><br>
+Appointment Details<br><br>
+
+<label style = "color:red; font-size:20px;">Patient</label> 
+<select 
+	name="fa_pid" =>
+	<% @patient.each do |i| %>
+		<option value = "<%= i.id %>"> <%= i.name%> </option>
+	<% end %>
+</select><br><br>
+
+<label style = "color:red; font-size:20px;">Doctor</label>
+<select
+	name="fa_did" =>
+	<% @doctor.each do |i| %>
+		<option value="<%= i.id %>"> <%= i.name%> </option>
+	<% end %>
+</select><br><br>
+
 <br>
 Date of appoint.: <input type="date" name="fa_date"><br>
 <br>
